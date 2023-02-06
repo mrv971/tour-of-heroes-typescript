@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import Hero from '../types/hero.type';
 
 @Component({
@@ -8,7 +8,9 @@ import Hero from '../types/hero.type';
 })
 export class HeroesListComponent implements OnInit {
 
-  heroes = [
+  @Input() hero: Hero;
+
+  heroes : Hero []= [
     { id : 1, name : 'Batman' , power : 'IDK'},
     { id : 2, name : 'Superman', power : 'Surhumain' },
     { id : 3, name : 'Spiderman', power : 'Homme araignée' },
@@ -20,6 +22,9 @@ export class HeroesListComponent implements OnInit {
   selectedHero: Hero;
 
   constructor() { }
+  selectHero(hero: Hero) {
+    this.selectedHero = hero;
+  }
   
   ngOnInit() {
   }

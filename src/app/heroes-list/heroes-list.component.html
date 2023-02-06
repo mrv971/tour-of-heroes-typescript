@@ -1,6 +1,10 @@
 <p>
   heroes-linjboijst works!
 </p>
-  <ul class="heroes">
-    <li *ngFor="let hero of heroes" (click)="selectHero(hero)"><span class="badge">{{ hero.id }}</span> {{ hero.name }} <span>{{ hero.power }}</span></li>
-    </ul>
+
+<ul class="heroes">
+  <li *ngFor="let hero of heroes" [class.selected]="selectedHero == hero" (click)="selectHero(hero)">
+  <span class="badge">{{ hero.id }}</span> {{ hero.name }} {{hero.power}}
+  </li>
+  </ul>
+  <app-hero-details *ngIf="selectedHero" [hero]="selectedHero"></app-hero-details>
