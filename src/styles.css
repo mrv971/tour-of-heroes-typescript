@@ -1,5 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 /* Application-wide Styles */
+:root {
+--minion-yellow: #F6E04Fff;
+--sap-green: #5A8338ff;
+--smoky-black: #0D1009ff;
+--white: #FEFEFEff;
+--outer-space-crayola: #283232ff;
+--badge-color: rgb(16, 151, 241);
+--dark-purple: #4A1641ff;
+--laurel-green: #A7B69Fff;
+}
 h1 {
     color: #369;
     font-family: Arial, Helvetica, sans-serif;
